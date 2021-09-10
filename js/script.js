@@ -101,7 +101,7 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-      var chosenCategoryShortName = '' + chooseRandomCategory;
+      var chosenCategoryShortName = chooseRandomCategory (categories).short_name;
 
 
 
@@ -118,7 +118,7 @@ function buildAndShowHomeHTML (categories) {
       //
      var  html = homeHtml;
       var homeHtmlToInsertIntoMainPage =
-        insertProperty(html, "randomCategoryShortName", chosenCategoryShortName);
+        insertProperty(html, "randomCategoryShortName", "'" + chosenCategoryShortName + "'");
 
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
